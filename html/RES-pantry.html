@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hotel Menu</title>
+    <link rel="stylesheet" href="css/styleres.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <style>
+        body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #f2f2f2;
+    margin: 0;
+    padding: 0;
+}
+
+.menu-container {
+    width: 400px;
+    margin: 60px auto;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    padding: 20px;
+}
+
+h1 {
+    text-align: center;
+    color: #333;
+}
+
+.add-item {
+    display: flex;
+    justify-content: space-between;
+    gap: 5px;
+}
+
+.add-item input {
+    flex: 1;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+button {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+#menuList {
+    list-style-type: none;
+    padding: 0;
+    margin-top: 20px;
+}
+
+#menuList li {
+    background-color: #fafafa;
+    padding: 10px;
+    margin-bottom: 8px;
+    border-radius: 4px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.remove-btn {
+    background-color: #ff4d4d;
+    border: none;
+    color: white;
+    border-radius: 4px;
+    cursor: pointer;
+    padding: 5px 10px;
+}
+
+.remove-btn:hover {
+    background-color: #e60000;
+}
+    </style>
+</head>
+<body>
+        <header>
+        <div>
+            <!-- <img src="" width="80px" height="80px"> -->
+        </div>
+        <nav class="navbar">
+            <ul class="nav-list">
+                <li class="nav-item">
+                    <a href="projects-1.html">Home</a>
+                    <a href="about us1.html">ABOUT US</a>
+                    <a href="resinfo.html">add restaurants</a>
+                    <a href="RES-pantry.html">pantry</a>
+                    <a href="login2.html">log in</a>
+                    <a href="signup 2.html">sign up</a>
+                    <a href="halls and room.html">rooms and halls</a>
+                    <a href="menu.html">menu</a>
+                    <a href="partner.html">partner with us</a>
+                    <a href="partner.html">partner with us</a>
+                    <a href="partner.html">partner with us</a>
+                    <a href="contact.html">Contact Us</a>
+                </li>
+
+            </ul>
+        </nav>
+        <div>
+           <button> <a href="order.html" class="btn nav-btn">Order Now</a></button>
+        </div>
+    </header>
+    <div class="menu-container">
+        <h1>Hotel Menu</h1>
+
+        <div class="add-item">
+            <input type="text" id="itemName" placeholder="Enter item name">
+            <input type="number" id="itemPrice" placeholder="Price">
+            <button id="addBtn">Add Item</button>
+        </div>
+
+        <ul id="menuList"></ul>
+    </div>
+
+    <script>
+        document.getElementById('addBtn').addEventListener('click', function() {
+    const name = document.getElementById('itemName').value.trim();
+    const price = document.getElementById('itemPrice').value.trim();
+    const list = document.getElementById('menuList');
+
+    if (name === '' || price === '') {
+        alert('Please enter both name and price!');
+        return;
+    }
+
+    const li = document.createElement('li');
+    li.innerHTML = `${name} - $${price} <button class="remove-btn">Remove</button>`;
+    list.appendChild(li);
+
+    li.querySelector('.remove-btn').addEventListener('click', function() {
+        li.remove();
+    });
+
+    // Clear inputs
+    document.getElementById('itemName').value = '';
+    document.getElementById('itemPrice').value = '';
+});
+    </script>
+     <footer class="footer">
+        <div class="footer container">
+            <div class="footer brand">
+                <h2>Varshney's Group Restaurant</h2>
+                <p>Luxury dining, events & hospitality across India.</p>
+            </div>
+            <div class="footer link">
+                <h3>Company</h3>
+              <ul>
+                <li><a href="#">About Us</a></li>
+                <li><a href="#">Careers</a></li>
+                <li><a href="#">Contact Us</a></li>
+              </ul>
+            </div>
+            <div class="footer link">
+                <h3>Contact</h3>
+                <p>
+                    <strong>Address:</strong> 123 Main Street, City, State, ZIP Code<br>
+                    <strong>Phone:</strong> +91 1234567890<br>
+                    <strong>Email:</strong> info@varshneys.com
+                </p>
+              
+        </div>
+        <div class="footer-bottom">
+        <p> &copy; 2025 Varshney's Group Restaurant . All rights reserved.</p>
+        </div>
+
+    </footer>
+
+</body>
+</html>

@@ -1,0 +1,76 @@
+.rooms-page {
+    font-family: 'Poppins', sans-serif;
+}
+
+/* HERO */
+.hero {
+    background: url('hotel.jpg') center/cover;
+    color: white;
+    text-align: center;
+    padding: 100px 20px;
+}
+
+.search-box {
+    margin-top: 20px;
+}
+
+.search-box input,
+.search-box button {
+    padding: 10px;
+    margin: 5px;
+    border: none;
+}
+
+.search-box button {
+    background: #D4AF37;
+    color: white;
+    cursor: pointer;
+}
+
+/* FILTER */
+.filters {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    padding: 20px;
+}
+
+/* ROOM LIST */
+.room-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    padding: 20px;
+    gap: 20px;
+}
+
+.room-card {
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    padding: 15px;
+}
+
+.room-card img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.room-card h3 {
+    margin: 10px 0;
+}
+
+.room-card .book {
+    background: #5A0F1C;
+    color: white;
+}
+
+/* FACILITIES */
+.facilities {
+    text-align: center;
+    padding: 40px;
+}
+
+.icons span {
+    margin: 10px;
+    display: inline-block;
+}

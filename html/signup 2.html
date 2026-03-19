@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>sign up-SV'S GROUP RESTAURANT</title>
+    <style>
+        /* form.css */
+
+        /* Reset and base */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: #e8f5e9;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        /* Form container */
+        form {
+            background-color: #4c1aef;
+            padding: 30px 40px;
+            border-radius: 10px;
+            width: 100%;
+            max-width: 500px;
+            box-shadow: 0 4px 12px rgba(76, 175, 80, 0.3);
+        }
+
+        /* Form elements */
+        form div {
+            margin-bottom: 20px;
+        }
+
+        form label,
+        form p {
+            display: block;
+            font-weight: bold;
+            margin-bottom: 8px;
+            color: #4c1aef;
+        }
+
+        form input[type="text"],
+        form input[type="email"],
+        form input[type="tel"],
+        form input[type="password"],
+        form input[type="date"],
+        form select {
+            width: 100%;
+            padding: 10px 12px;
+            border: 1px solid #4c1aef;
+            border-radius: 5px;
+            background-color: #f1f8e9;
+            font-size: 16px;
+            color: #4c1aef;
+        }
+
+        form input::placeholder {
+            color: #4c1aef;
+        }
+
+        /* Radio & Checkbox styling */
+        form input[type="radio"],
+        form input[type="checkbox"] {
+            margin-right: 8px;
+            transform: scale(1.2);
+            accent-color: #4c1aef;
+        }
+
+        form label[for="basic"],
+        form label[for="premium"],
+        form label[for="vip"],
+        form label[for="terms"] {
+            font-weight: normal;
+            color: #0e0c13;
+        }
+
+        /* Optional: add a submit button */
+        form button {
+            background-color: #4c1aef;
+            color: white;
+            padding: 12px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: background-color 0.3s;
+            width: 100%;
+            margin-top: 10px;
+        }
+
+        form button:hover {
+            background-color: #4c1aef;
+        }
+    </style>
+</head>
+
+<body>
+    <form action="/submit.php">
+        <div>
+            <lable for="name">name:</lable>
+            <input id="name" type="text" placeholder="ENTER NAME" required="">
+        </div>
+        <div>
+            <lable for="phone">phone:</lable>
+            <input id="phone" type="tel" placeholder="ENTER PHONE" required="">
+        </div>
+        <div>
+            <lable for="email">email:</lable>
+            <input id="email" type="email" placeholder="ENTER EMAIL" required="">
+        </div>
+        <div>
+            <lable for="password">password:</lable>
+            <input id="password" type="password" placeholder="ENTER password" required="">
+        </div>
+        <div>
+            <lable for="dob">date of birth:</lable>
+            <input id="dob" type="date" placeholder="ENTER date" required="">
+        </div>
+        <div>
+            <lable for="gender">gender:</lable>
+            <select id="gender" required="">
+                <option value="" disabled="" selected="">select gender</option>
+                <option value="male">male</option>
+                <option value="female">female</option>
+                <option value="other">other</option>
+            </select>
+        </div>
+        <div>
+            <p>subscription plan</p>
+            <input id="basic" type="radio" name="subscription" value="basic">
+            <label for="basic">basic</label>
+
+            <input id="premium" type="radio" name="subscription" value="premium">
+            <label for="premium">premium</label>
+
+            <input id="vip" type="radio" name="subscription" value="vip">
+            <label for="vip">vip</label>
+        </div>
+        <div>
+            <input id="terms" type="checkbox" required="">
+            <label for="terms">i agree to the terms and conditions</label>
+        </div>
+
+    </form>
+</body>
+
+</html>
